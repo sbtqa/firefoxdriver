@@ -44,7 +44,7 @@
             </goals>
             <configuration>
               <url>
-                https://github.com/mozilla/geckodriver/releases/download/v${project.version}/geckodriver-v${firefoxdriver.version}-win32.zip
+                https://github.com/mozilla/geckodriver/releases/download/v${project.version}/geckodriver-v${project.version}-win32.zip
               </url>
               <unpack>true</unpack>
               <outputDirectory>${project.build.directory}/win32</outputDirectory>
@@ -58,7 +58,7 @@
             </goals>
             <configuration>
               <url>
-                https://github.com/mozilla/geckodriver/releases/download/v${firefoxdriver.version}/geckodriver-v${firefoxdriver.version}-linux64.tar.gz
+                https://github.com/mozilla/geckodriver/releases/download/v${project.version}/geckodriver-v${project.version}-linux64.tar.gz
               </url>
               <unpack>true</unpack>
               <outputDirectory>${project.build.directory}/linux64</outputDirectory>
@@ -72,7 +72,7 @@
             </goals>
             <configuration>
               <url>
-                https://github.com/mozilla/geckodriver/releases/download/v${firefoxdriver.version}/geckodriver-v${firefoxdriver.version}-macos.tar.gz
+                https://github.com/mozilla/geckodriver/releases/download/v${project.version}/geckodriver-v${project.version}-macos.tar.gz
               </url>
               <unpack>true</unpack>
               <outputDirectory>${project.build.directory}/mac</outputDirectory>
