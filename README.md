@@ -1,2 +1,2 @@
-# firefoxdriver
+# firefoxdriver-bin
 tba
