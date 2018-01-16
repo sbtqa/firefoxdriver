@@ -51,6 +51,34 @@
             </configuration>
           </execution>
           <execution>
+            <id>download-win64</id>
+            <phase>pre-integration-test</phase>
+            <goals>
+              <goal>wget</goal>
+            </goals>
+            <configuration>
+              <url>
+                https://github.com/mozilla/geckodriver/releases/download/v${project.version}/geckodriver-v${project.version}-win64.zip
+              </url>
+              <unpack>true</unpack>
+              <outputDirectory>${project.build.directory}/win64</outputDirectory>
+            </configuration>
+          </execution>
+          <execution>
+            <id>download-linux32</id>
+            <phase>pre-integration-test</phase>
+            <goals>
+              <goal>wget</goal>
+            </goals>
+            <configuration>
+              <url>
+                https://github.com/mozilla/geckodriver/releases/download/v${project.version}/geckodriver-v${project.version}-linux32.tar.gz
+              </url>
+              <unpack>true</unpack>
+              <outputDirectory>${project.build.directory}/linux32</outputDirectory>
+            </configuration>
+          </execution>
+          <execution>
             <id>download-linux64</id>
             <phase>pre-integration-test</phase>
             <goals>
@@ -97,6 +125,16 @@
                   <file>${project.build.directory}/win32/geckodriver.exe</file>
                   <type>bin</type>
                   <classifier>win32</classifier>
+                </artifact>
+                <artifact>
+                  <file>${project.build.directory}/win64/geckodriver.exe</file>
+                  <type>bin</type>
+                  <classifier>win64</classifier>
+                </artifact>
+                <artifact>
+                  <file>${project.build.directory}/linux32/geckodriver</file>
+                  <type>bin</type>
+                  <classifier>linux32</classifier>
                 </artifact>
                 <artifact>
                   <file>${project.build.directory}/linux64/geckodriver</file>
